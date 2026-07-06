@@ -52,20 +52,13 @@ O meu objetivo é iniciar na área como **IT Support**, **Help Desk**, **NOC Ana
 
 | Projeto | Área | Ferramentas | Resultado / Evidência |
 |---|---|---|---|
-| SSH Brute-Force Detection with Splunk | SIEM / Detection Engineering | Splunk, OpenSSH, Nmap, Metasploit | Deteção de múltiplas tentativas falhadas de login SSH e criação de alerta no Splunk. |
-
-| Port Scan Detection Engineering Lab | Reconhecimento / NOC / SOC | Nmap, Gobuster, tcpdump, Apache logs, Wireshark | Identificação de portas 22/SSH e 80/HTTP, enumeração web e lógica de deteção para comportamento de reconhecimento. |
-
-| Reverse Shell Network Detection | Análise de Tráfego | Kali, Ubuntu, Netcat, Metasploit, Wireshark | Análise de comunicação suspeita na porta 4444 e identificação de indicadores de reverse shell. |
-
-| Beaconing Traffic Detection | C2 / Análise Temporal | Kali, Ubuntu, Wireshark, Splunk | Deteção de 71 conexões HTTP periódicas com intervalo aproximado de 10 segundos. |
-
-| FTP Brute Force Visibility Analysis | SIEM / Logs / Correlação | Splunk, vsftpd, Metasploit, Kali | Correlação de 273 falhas de login e 2 logins bem-sucedidos em 3 alertas agregados no Splunk. |
-
-| Detection Rule Tuning & False Positive Reduction | Detection Engineering | Splunk, FTP logs, Hydra/Metasploit | Refinamento de regra para remover falsos positivos simulados sem perder a deteção do ataque real. |
-
-| Phishing Email Header Forensics | Email Security / SOC | Python, MXToolbox, CyberChef, urlscan.io | Análise de 3 casos de email, incluindo phishing confirmado com falha de SPF/DMARC e domínio falso imitando PayPal. |
-
+| [SSH Brute-Force Detection with Splunk](https://github.com/luanbasso04-ops/brute_force_SSH) | SIEM / Detection Engineering | Splunk, OpenSSH, Nmap, Metasploit | Deteção de múltiplas tentativas falhadas de login SSH e criação de alerta no Splunk. |
+| [Port Scan Detection Engineering Lab](https://github.com/luanbasso04-ops/port-scan-detection-engineering-lab) | Reconhecimento / NOC / SOC | Nmap, Gobuster, tcpdump, Apache logs, Wireshark | Identificação de portas 22/SSH e 80/HTTP, enumeração web e lógica de deteção para comportamento de reconhecimento. |
+| [Reverse Shell Network Detection](https://github.com/luanbasso04-ops/Reverse_Shell_Network_Detection) | Análise de Tráfego | Kali, Ubuntu, Netcat, Metasploit, Wireshark | Análise de comunicação suspeita na porta 4444 e identificação de indicadores de reverse shell. |
+| [Beaconing Traffic Detection](https://github.com/luanbasso04-ops/beaconing-traffic-detection-lab) | C2 / Análise Temporal | Kali, Ubuntu, Wireshark, Splunk | Deteção de 71 conexões HTTP periódicas com intervalo aproximado de 10 segundos. |
+| [FTP Brute Force Visibility Analysis](https://github.com/luanbasso04-ops/FTP_Brute_Force-_Exploitation_Visibility) | SIEM / Logs / Correlação | Splunk, vsftpd, Metasploit, Kali | Correlação de 273 falhas de login e 2 logins bem-sucedidos em 3 alertas agregados no Splunk. |
+| [Detection Rule Tuning & False Positive Reduction](https://github.com/luanbasso04-ops/Detection_Rule_Tuning_-_False_Positive_Reduction) | Detection Engineering | Splunk, FTP logs, Hydra/Metasploit | Refinamento de regra para remover falsos positivos simulados sem perder a deteção do ataque real. |
+| [Phishing Email Header Forensics](https://github.com/luanbasso04-ops/phishing-header-forensics) | Email Security / SOC | Python, MXToolbox, CyberChef, urlscan.io | Análise de 3 casos de email, incluindo phishing confirmado com falha de SPF/DMARC e domínio falso imitando PayPal. |
 ---
 
 ## Projetos em Destaque
