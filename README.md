@@ -1,188 +1,298 @@
 # cybersecurity-portfolio
 # Portfólio de Cibersegurança — Luan Basso
 
-Portfólio com projetos práticos em cibersegurança, redes, análise de logs, Wireshark, Splunk, Linux e segurança web.
+# Portfólio de Cibersegurança — Luan Basso
+
+Portfólio com projetos práticos em cibersegurança defensiva, análise de logs, deteção de ataques, redes, Splunk, Wireshark, Linux e investigação de phishing.
 
 ## Sobre mim
 
-Sou um profissional em transição para a área de Tecnologia e Cibersegurança, com formação prática de 300 horas pelo IEFP.
+Sou um profissional em transição para a área de Tecnologia e Cibersegurança, com formação prática de 300 horas em Cibersegurança pelo IEFP.
 
-Tenho experiência laboratorial com análise de tráfego de rede, investigação de logs, deteção de atividades suspeitas, ambientes Linux, ferramentas SIEM e testes de vulnerabilidades web em ambientes controlados.
+Tenho experiência laboratorial com análise de tráfego de rede, investigação de logs, deteção de atividades suspeitas, criação de regras de deteção, troubleshooting, fundamentos de redes e análise de emails suspeitos.
 
-Procuro oportunidades de entrada em IT Support, Help Desk, NOC Analyst ou Cybersecurity Trainee, onde possa aplicar meus conhecimentos práticos, continuar aprendendo e crescer na área de tecnologia.
+O meu objetivo é iniciar na área como **IT Support**, **Help Desk**, **NOC Analyst** ou **Cybersecurity Trainee**, aplicando conhecimentos práticos em suporte técnico, redes, monitorização e segurança defensiva.
 
-## Competências técnicas
+---
 
-### Suporte, sistemas e redes
+## Competências Técnicas
 
 - Troubleshooting técnico
 - Linux e Windows
-- Linha de comandos
-- Redes TCP/IP
-- DNS, DHCP, gateways, portas e protocolos
-- VLANs e segmentação de redes
+- Redes TCP/IP, DNS, DHCP, portas e protocolos
+- Análise de logs e eventos de segurança
+- Wireshark para análise de tráfego
+- Splunk para investigação, correlação e alertas
+- Nmap para reconhecimento em laboratório
+- Análise de brute force, port scan, reverse shell e beaconing
+- Análise de phishing, headers de email, SPF, DKIM e DMARC
+- Conceitos de SOC, SIEM, NOC e resposta a incidentes
 
-### Cibersegurança
+---
 
-- Análise de logs
-- Monitorização de eventos de segurança
-- Análise de tráfego de rede
-- Identificação de comunicações suspeitas
-- Noções de SOC, SIEM e resposta a incidentes
-- Análise de phishing e URLs suspeitas
-- Vulnerabilidades Web baseadas em OWASP
-
-### Ferramentas utilizadas
+## Ferramentas Utilizadas
 
 - Kali Linux
-- Ubuntu
+- Ubuntu Server
+- Windows
+- Splunk Enterprise
 - Wireshark
-- Splunk
+- tcpdump
 - Nmap
-- Netcat
-- Burp Suite
-- OWASP ZAP
 - Gobuster
-- DVWA
-- OWASP Juice Shop
-- Cisco Packet Tracer
+- Netcat
+- Metasploit Framework
+- Hydra
+- Python
+- MXToolbox
+- CyberChef
 
-## Projetos
+---
 
-### Reverse Shell Detection Lab
+## Projetos Principais
 
-Laboratório criado com Kali Linux, máquina alvo e ambiente de análise para identificar comportamento suspeito de reverse shell.
+| Projeto | Área | Ferramentas | Resultado / Evidência |
+|---|---|---|---|
+| SSH Brute-Force Detection with Splunk | SIEM / Detection Engineering | Splunk, OpenSSH, Nmap, Metasploit | Deteção de múltiplas tentativas falhadas de login SSH e criação de alerta no Splunk. |
 
-**Ferramentas utilizadas:** Kali Linux, Ubuntu, Netcat, Wireshark, Splunk
+| Port Scan Detection Engineering Lab | Reconhecimento / NOC / SOC | Nmap, Gobuster, tcpdump, Apache logs, Wireshark | Identificação de portas 22/SSH e 80/HTTP, enumeração web e lógica de deteção para comportamento de reconhecimento. |
+
+| Reverse Shell Network Detection | Análise de Tráfego | Kali, Ubuntu, Netcat, Metasploit, Wireshark | Análise de comunicação suspeita na porta 4444 e identificação de indicadores de reverse shell. |
+
+| Beaconing Traffic Detection | C2 / Análise Temporal | Kali, Ubuntu, Wireshark, Splunk | Deteção de 71 conexões HTTP periódicas com intervalo aproximado de 10 segundos. |
+
+| FTP Brute Force Visibility Analysis | SIEM / Logs / Correlação | Splunk, vsftpd, Metasploit, Kali | Correlação de 273 falhas de login e 2 logins bem-sucedidos em 3 alertas agregados no Splunk. |
+
+| Detection Rule Tuning & False Positive Reduction | Detection Engineering | Splunk, FTP logs, Hydra/Metasploit | Refinamento de regra para remover falsos positivos simulados sem perder a deteção do ataque real. |
+
+| Phishing Email Header Forensics | Email Security / SOC | Python, MXToolbox, CyberChef, urlscan.io | Análise de 3 casos de email, incluindo phishing confirmado com falha de SPF/DMARC e domínio falso imitando PayPal. |
+
+---
+
+## Projetos em Destaque
+
+### SSH Brute-Force Detection with Splunk
+
+Projeto focado na deteção de tentativas repetidas de login SSH utilizando logs de autenticação e Splunk.
 
 **O que foi feito:**
 
-- Criação de ambiente controlado com máquinas virtuais.
-- Simulação de comunicação entre atacante e máquina alvo.
-- Captura de tráfego com Wireshark.
-- Identificação de conexão TCP suspeita.
-- Importação de ficheiro PCAP no Splunk.
-- Análise dos eventos para compreender o comportamento da comunicação.
+- Validação do serviço SSH exposto na porta 22.
+- Geração controlada de falhas de autenticação em ambiente laboratorial.
+- Ingestão de logs no Splunk.
+- Extração de campos como IP de origem e utilizador.
+- Criação de query SPL para identificar brute force.
+- Configuração e validação de alerta no Splunk.
+
+**Competências demonstradas:**
+
+- Análise de logs SSH
+- Criação de regra de deteção
+- Uso de SPL
+- Configuração de alerta
+- Fluxo básico de trabalho SOC
+
+---
+
+### Port Scan Detection Engineering Lab
+
+Projeto de deteção de atividade de reconhecimento contra um servidor Linux com SSH e Apache.
+
+**O que foi feito:**
+
+- Execução de diferentes tipos de scan com Nmap.
+- Identificação dos serviços SSH e HTTP.
+- Enumeração web com Gobuster e curl.
+- Captura de tráfego com tcpdump.
+- Análise de logs Apache.
+- Criação de lógica de deteção para enumeração web e port scanning.
+
+**Evidências observadas:**
+
+- Porta 22/tcp aberta com OpenSSH.
+- Porta 80/tcp aberta com Apache.
+- Acessos a caminhos sensíveis como `.htaccess`, `.htpasswd` e `server-status`.
+- Alto volume de respostas HTTP 404 geradas por enumeração.
+
+**Competências demonstradas:**
+
+- Reconhecimento defensivo
+- Análise de Apache logs
+- Deteção de web enumeration
+- Análise de tráfego
+- Criação de lógica SIEM
+
+---
+
+### Reverse Shell Network Detection
+
+Laboratório para simular e analisar comportamento semelhante a reverse shell em ambiente controlado.
+
+**O que foi feito:**
+
+- Criação de ambiente com Kali Linux, Ubuntu Server e máquina de análise.
+- Geração controlada de reverse shell em laboratório.
+- Captura do tráfego com tcpdump/Wireshark.
+- Análise de conexão TCP na porta 4444.
+- Identificação de indicadores como IP de origem, IP de destino, porta e comportamento da sessão.
 
 **Competências demonstradas:**
 
 - Análise de tráfego de rede
-- Investigação de eventos suspeitos
-- Uso de Wireshark e Splunk
-- Fundamentos de deteção em ambiente SOC/NOC
+- Identificação de comunicação suspeita
+- Uso de Wireshark
+- Interpretação de conexões TCP
+- Fundamentos de deteção em ambiente SOC
 
 ---
 
-### Análise de Logs e Eventos com Splunk
+### Beaconing Traffic Detection
 
-Projeto focado na importação, pesquisa e análise de eventos utilizando Splunk.
-
-**Ferramentas utilizadas:** Splunk, Linux, ficheiros de log/PCAP
+Projeto focado na identificação de comunicação periódica semelhante a tráfego de Command & Control.
 
 **O que foi feito:**
 
-- Importação de dados para o Splunk.
-- Criação de pesquisas para filtrar eventos relevantes.
-- Análise de padrões suspeitos em logs.
-- Organização dos resultados em relatórios simples.
-- Estudo da importância dos logs para investigação de incidentes.
+- Simulação de tráfego HTTP periódico em laboratório.
+- Captura de tráfego com Wireshark/tcpdump.
+- Análise temporal das conexões.
+- Investigação no Splunk.
+- Identificação de padrão repetitivo com intervalo aproximado de 10 segundos.
+
+**Resultado observado:**
+
+- 71 conexões HTTP para o mesmo destino.
+- Mesmo IP de origem.
+- Mesma porta de destino.
+- URI repetida `/beacon`.
+- Regularidade temporal compatível com comportamento de beaconing.
 
 **Competências demonstradas:**
 
-- Análise de logs
-- Pesquisa e filtragem de eventos
-- Noções de SIEM
-- Interpretação de eventos de segurança
+- Análise temporal de eventos
+- Deteção de padrões repetitivos
+- Investigação com Splunk
+- Análise de tráfego HTTP
+- Conceitos de C2 e beaconing
 
 ---
 
-### Análise de Phishing e Indicadores Suspeitos
+### FTP Brute Force Visibility Analysis
 
-Projeto focado na identificação de sinais comuns em tentativas de phishing.
-
-**Ferramentas e conceitos utilizados:** análise manual, URLs, domínios, typosquatting, padrões suspeitos
+Projeto de comparação entre logs brutos e deteção SIEM durante um brute force FTP em ambiente controlado.
 
 **O que foi feito:**
 
-- Análise de URLs e domínios semelhantes a marcas reais.
-- Identificação de possíveis sinais de phishing.
-- Observação de typosquatting e domínios suspeitos.
-- Extração de indicadores como IPs, portas, URLs e padrões em logs.
+- Identificação do serviço FTP na porta 21.
+- Geração controlada de tentativas de login.
+- Análise do log bruto do vsftpd.
+- Ingestão e correlação dos eventos no Splunk.
+- Criação de lógica para classificar brute force e login bem-sucedido.
+
+**Resultado observado:**
+
+- 273 falhas de login.
+- 2 logins bem-sucedidos.
+- 275 eventos brutos analisados.
+- Agregação dos eventos em 3 alertas no Splunk.
 
 **Competências demonstradas:**
 
-- Atenção a indicadores de compromisso
-- Análise de domínios suspeitos
-- Investigação inicial de phishing
-- Documentação de evidências
+- Análise de logs FTP
+- Correlação de eventos
+- Criação de alerta
+- Comparação entre log bruto e SIEM
+- Visibilidade de ataque em ambiente monitorizado
 
 ---
 
-### Laboratórios de Vulnerabilidades Web — OWASP
+### Detection Rule Tuning & False Positive Reduction
 
-Testes práticos em ambientes vulneráveis controlados para compreender falhas comuns em aplicações web.
-
-Ferramentas utilizadas: DVWA, OWASP Juice Shop, Burp Suite, OWASP ZAP, Nmap, Gobuster
-
-O que foi feito:
-
-- Testes em ambientes laboratoriais vulneráveis.
-- Identificação de falhas como XSS, SQL Injection, Command Injection e Path Traversal.
-- Uso de ferramentas de análise web para observar requisições e respostas.
-- Estudo de proteções ausentes, como cabeçalhos de segurança e mecanismos anti-CSRF.
-
-Competências demonstradas:
-
-- Fundamentos de segurança web
-- Conceitos OWASP
-- Análise de vulnerabilidades em ambiente controlado
-- Uso inicial de ferramentas de teste web
-
----
-
-### Redes e Segmentação com VLANs
-
-Projeto de redes em ambiente simulado com foco em conectividade, segmentação e troubleshooting.
-
-**Ferramentas utilizadas:** Cisco Packet Tracer
+Projeto focado no refinamento de regras de deteção para reduzir falsos positivos.
 
 **O que foi feito:**
 
-- Configuração de VLANs.
-- Configuração de gateways e DHCP.
-- Testes de conectividade entre segmentos.
-- Análise de problemas de rede e troubleshooting.
+- Criação de uma regra inicial com threshold simples.
+- Simulação de atividade maliciosa e ruído benigno.
+- Identificação de falsos positivos.
+- Refinamento da regra com janela temporal e threshold mais adequado.
+- Validação da deteção final no Splunk.
+
+**Resultado observado:**
+
+- A regra inicial detetava o ataque real, mas também gerava falso positivo.
+- A regra refinada removeu os falsos positivos simulados.
+- A deteção do ataque real foi mantida.
 
 **Competências demonstradas:**
 
-- Fundamentos de redes
-- Segmentação de rede
-- Troubleshooting
-- Organização lógica de ambientes de rede
+- Detection engineering
+- Redução de falsos positivos
+- Tuning de regras SIEM
+- Correlação temporal
+- Análise crítica de alertas
 
-## Ambiente de laboratório
+---
 
-Os projetos foram realizados em ambiente controlado, com máquinas virtuais e redes isoladas para fins educativos e defensivos.
+### Phishing Email Header Forensics
+
+Projeto de investigação de emails suspeitos utilizando análise de headers, autenticação e indicadores de phishing.
+
+**O que foi feito:**
+
+- Análise de amostras `.eml`.
+- Extração de headers e URLs.
+- Verificação de SPF, DKIM e DMARC.
+- Análise de domínios suspeitos.
+- Identificação de tracking, spoofing e possível phishing.
+- Criação de relatórios de incidente e lista de IOCs.
+
+**Resultado observado:**
+
+- 3 casos analisados.
+- 2 casos classificados como suspeitos/marketing agressivo.
+- 1 caso classificado como phishing confirmado.
+- Identificação de domínio falso imitando PayPal.
+- SPF e DMARC falharam no caso de phishing confirmado.
+
+**Competências demonstradas:**
+
+- Análise de phishing
+- Email authentication
+- Extração de IOCs
+- Investigação de headers
+- Criação de relatório de incidente
+
+---
+
+## Projeto em Desenvolvimento
+
+### Duplicate File Detector & Quarantine Tool
+
+Ferramenta em Python para deteção de ficheiros duplicados através de hash SHA-256, com interface gráfica, autenticação e movimentação dos duplicados para uma pasta de quarentena.
+
+**Funcionalidades atuais:**
+
+- Interface gráfica com Tkinter.
+- Autenticação com password.
+- Hashing seguro com Argon2id.
+- Cálculo de hash SHA-256 dos ficheiros.
+- Deteção de ficheiros duplicados.
+- Movimentação de duplicados para quarentena.
+- Criação de log dos ficheiros movidos.
+
+**Estado:** Em desenvolvimento.
+
+---
+
+## Ambiente de Laboratório
+
+Os projetos foram realizados em ambiente controlado e isolado, com máquinas virtuais e serviços próprios para fins educativos e defensivos.
 
 Exemplo de ambiente utilizado:
 
-- Kali Linux — máquina de testes
-- Ubuntu — máquina alvo/laboratório
-- Splunk — análise de logs e eventos
-- Wireshark — captura e análise de tráfego
-- Rede interna isolada
 
-## Formação
-
-**Curso de Cibersegurança — 300 horas**  
-IEFP — Portugal
-
-Formação prática em redes, Linux, análise de logs, fundamentos de segurança, ferramentas de análise e laboratórios controlados.
-
-## Objetivo profissional
-
-Procuro uma oportunidade de entrada em IT Support, Help Desk, NOC Analyst ou Cybersecurity Trainee, onde possa aplicar meus conhecimentos práticos, desenvolver experiência real e crescer na área de Tecnologia e Cibersegurança.
-
+Kali Linux        →        Ubuntu Server        →        Splunk / Wireshark
+Testes controlados         Alvo laboratorial              Análise e monitorização
 ## Contacto
 
 Email: luanbasso04@gmail.com  
