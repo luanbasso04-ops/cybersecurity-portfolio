@@ -1,5 +1,5 @@
 # cybersecurity-portfolio
-P# Portfólio de Cibersegurança — Luan Basso
+# Portfólio de Cibersegurança — Luan Basso
 
 Portfólio com projetos práticos em cibersegurança, redes, análise de logs, Wireshark, Splunk, Linux e segurança web.
 
