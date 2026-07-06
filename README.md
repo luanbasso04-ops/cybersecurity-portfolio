@@ -1,8 +1,8 @@
-# cybersecurity-portfolio
 # Portfólio de Cibersegurança — Luan Basso
 
-
 Portfólio com projetos práticos em cibersegurança defensiva, análise de logs, deteção de ataques, redes, Splunk, Wireshark, Linux e investigação de phishing.
+
+---
 
 ## Sobre mim
 
@@ -45,6 +45,7 @@ O meu objetivo é iniciar na área como **IT Support**, **Help Desk**, **NOC Ana
 - Python
 - MXToolbox
 - CyberChef
+- urlscan.io
 
 ---
 
@@ -57,8 +58,9 @@ O meu objetivo é iniciar na área como **IT Support**, **Help Desk**, **NOC Ana
 | [Reverse Shell Network Detection](https://github.com/luanbasso04-ops/Reverse_Shell_Network_Detection) | Análise de Tráfego | Kali, Ubuntu, Netcat, Metasploit, Wireshark | Análise de comunicação suspeita na porta 4444 e identificação de indicadores de reverse shell. |
 | [Beaconing Traffic Detection](https://github.com/luanbasso04-ops/beaconing-traffic-detection-lab) | C2 / Análise Temporal | Kali, Ubuntu, Wireshark, Splunk | Deteção de 71 conexões HTTP periódicas com intervalo aproximado de 10 segundos. |
 | [FTP Brute Force Visibility Analysis](https://github.com/luanbasso04-ops/FTP_Brute_Force-_Exploitation_Visibility) | SIEM / Logs / Correlação | Splunk, vsftpd, Metasploit, Kali | Correlação de 273 falhas de login e 2 logins bem-sucedidos em 3 alertas agregados no Splunk. |
-| [Detection Rule Tuning & False Positive Reduction](https://github.com/luanbasso04-ops/Detection_Rule_Tuning_-_False_Positive_Reduction) | Detection Engineering | Splunk, FTP logs, Hydra/Metasploit | Refinamento de regra para remover falsos positivos simulados sem perder a deteção do ataque real. |
+| [Detection Rule Tuning & False Positive Reduction](https://github.com/luanbasso04-ops/Detection_Rule_Tuning_-_False_Positive_Reduction) | Detection Engineering | Splunk, FTP logs, Hydra / Metasploit | Refinamento de regra para remover falsos positivos simulados sem perder a deteção do ataque real. |
 | [Phishing Email Header Forensics](https://github.com/luanbasso04-ops/phishing-header-forensics) | Email Security / SOC | Python, MXToolbox, CyberChef, urlscan.io | Análise de 3 casos de email, incluindo phishing confirmado com falha de SPF/DMARC e domínio falso imitando PayPal. |
+
 ---
 
 ## Projetos em Destaque
@@ -282,14 +284,34 @@ Os projetos foram realizados em ambiente controlado e isolado, com máquinas vir
 
 Exemplo de ambiente utilizado:
 
-
+```text
 Kali Linux        →        Ubuntu Server        →        Splunk / Wireshark
 Testes controlados         Alvo laboratorial              Análise e monitorização
+```
+
+---
+
+## Formação
+
+**Curso de Cibersegurança — 300 horas**  
+IEFP — Portugal
+
+Formação prática em redes, Linux, análise de logs, fundamentos de segurança, SIEM, análise de tráfego, phishing e laboratórios controlados.
+
+---
+
+## Objetivo Profissional
+
+Procuro uma oportunidade de entrada em **IT Support**, **Help Desk**, **NOC Analyst** ou **Cybersecurity Trainee**, onde possa aplicar meus conhecimentos práticos, desenvolver experiência real e crescer na área de Tecnologia e Cibersegurança.
+
+---
+
 ## Contacto
 
-Email: luanbasso04@gmail.com  
-GitHub: github.com/luanbasso04-ops  
+- Email: luanbasso04@gmail.com
+- GitHub: https://github.com/luanbasso04-ops
+- LinkedIn: adicionar link
 
-
+---
 
 Este portfólio está em desenvolvimento ativo. Novos projetos são adicionados regularmente.
